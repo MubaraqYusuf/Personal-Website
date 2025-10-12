@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Development Tutorials - Learn HTML, CSS, and JavaScript with practical examples">
+  <meta name="author" content="Mubaraq Yusuf">
+  <meta name="created" content="2025-10-09">
+  <title>Tutorials - Frontend Development Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header page title and tagline -->
+  <header>
+    <div class="container">
+      <h1>Frontend Tutorials</h1>
+      <p class="tagline">Learn By Doing - Practical Examples and Exercises</p>
+    </div>
+  </header>
+
+  <!-- Navbar menu used across the website -->
+  <nav>
+    <div class="container">
+      <ul class="nav-menu">
+        <!-- Active used to indicate the current page visually -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutorials.html" class="active">Tutorials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main container that holds all the tutorial sections -->
+  <main class="container">
+
+    <!-- HTML tutorials section:
+         - Essential HTML concepts and best practices.
+         - Semantic headings and lists.
+    -->
+    <section id="html" class="tutorial-section">
+      <h2>HTML Tutorials</h2>
+      <p>HTML (HyperText Markup Language) is the <strong>foundation</strong> of all web pages. It provides structure and meaning to web content.</p>
+
+      <h3>Essential HTML Concepts</h3>
+      <!-- Concept-list that shows key topics students should learn -->
+      <ul class="concept-list">
+        <li><strong>Semantic HTML:</strong> Using meaningful tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code></li>
+        <li><strong>Document Structure:</strong> Properly organizing your HTML with <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> sections</li>
+        <li><strong>Text Formatting:</strong> Using tags like <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;strong&gt;</code>, and <code>&lt;em&gt;</code></li>
+        <li><strong>Links and Navigation:</strong> Creating hyperlinks with <code>&lt;a&gt;</code> tags</li>
+        <li><strong>Images:</strong> Embedding images using <code>&lt;img&gt;</code> with proper alt text</li>
+        <li><strong>Lists:</strong> Creating ordered and unordered lists</li>
+        <li><strong>Tables:</strong> Organizing data in tabular format</li>
+        <li><strong>Forms:</strong> Collecting user input with various form elements</li>
+      </ul>
+
+      <h3>HTML Best Practices</h3>
+      <!-- Ordered list provides short best-practice items -->
+      <ol>
+        <li>Always use semantic HTML elements for better accessibility</li>
+        <li>Include proper metadata in the <code>&lt;head&gt;</code> section</li>
+        <li>Use descriptive alt text for images</li>
+        <li>Validate your HTML code regularly</li>
+        <li>Keep your code clean and well-indented</li>
+      </ol>
+    </section>
+
+    <!-- CSS tutorials section:
+         - Explains the meaning of CSS, visual styling concepts and layout systems.
+    -->
+    <section id="css" class="tutorial-section">
+      <h2>CSS Tutorials</h2>
+      <p>CSS (Cascading Style Sheets) changes your HTML structure into <em>attractive</em> and <em>responsive</em> web pages.</p>
+
+      <h3>Key CSS Topics</h3>
+      <ul class="concept-list">
+        <li><strong>Selectors:</strong> Targeting HTML elements for styling</li>
+        <li><strong>Box Model:</strong> Understanding margin, border, padding, and content</li>
+        <li><strong>Flexbox:</strong> Creating flexible, one-dimensional layouts</li>
+        <li><strong>Grid:</strong> Building complex, two-dimensional layouts</li>
+        <li><strong>Responsive Design:</strong> Using media queries for different screen sizes</li>
+        <li><strong>Animations:</strong> Adding smooth transitions and keyframe animations</li>
+        <li><strong>Custom Properties:</strong> Using CSS variables for maintainable code</li>
+      </ul>
+
+      <h3>CSS Layout Techniques</h3>
+      <p>Modern CSS offers powerful layout systems:</p>
+      <ul>
+        <li><mark>Flexbox</mark> - Perfect for navigation menus, card layouts, and centering content</li>
+        <li><mark>Grid</mark> - Ideal for page layouts, image galleries, and complex designs</li>
+        <li><mark>Positioning</mark> - For overlays, tooltips, and precise element placement</li>
+      </ul>
+    </section>
+
+    <!-- JavaScript tutorials section:
+         - Explains fundamental programming concepts and how to manipulate the DOM.
+    -->
+    <section id="javascript" class="tutorial-section">
+      <h2>JavaScript Tutorials</h2>
+      <p>JavaScript adds <strong>interactive</strong> and <strong>dynamic behavior</strong> to your web pages.</p>
+
+      <h3>JavaScript Fundamentals</h3>
+      <ul class="concept-list">
+        <li><strong>Variables and Data Types:</strong> let, const, strings, numbers, arrays, objects</li>
+        <li><strong>Functions:</strong> Reusable blocks of code</li>
+        <li><strong>DOM Manipulation:</strong> Selecting and modifying HTML elements</li>
+        <li><strong>Event Handling:</strong> Responding to user interactions</li>
+        <li><strong>Conditional Statements:</strong> if/else logic</li>
+        <li><strong>Loops:</strong> for, while, forEach</li>
+        <li><strong>ES6+ Features:</strong> Arrow functions, template literals, destructuring</li>
+      </ul>
+    </section>
+
+    <!-- Feedback form:
+         - A simple accessible form with labels.
+         - Action="#"(no server required).
+    -->
+    <section class="feedback-form-section">
+      <h2>Tutorial Feedback Form</h2>
+      <p>Help us improve! Share your feedback about the tutorials.</p>
+
+      <form class="tutorial-form" action="#" method="post" novalidate>
+        <!-- Name field required text input -->
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- Email field required email input.-->
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+        </div>
+
+        <!-- Experience select required choice -->
+        <div class="form-group">
+          <label for="experience">Experience Level:</label>
+          <select id="experience" name="experience" required>
+            <option value="">-- Select your level --</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+
+        <!-- Checkbox group, multiple selectable tutorial topics -->
+        <div class="form-group">
+          <label>Which tutorials did you find most helpful?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="tutorials" value="html"> HTML Tutorials</label>
+            <label><input type="checkbox" name="tutorials" value="css"> CSS Tutorials</label>
+            <label><input type="checkbox" name="tutorials" value="javascript"> JavaScript Tutorials</label>
+          </div>
+        </div>
+
+        <!-- Radio group, choice rating -->
+        <div class="form-group">
+          <label>How would you rate this website?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="rating" value="excellent" required> Excellent</label>
+            <label><input type="radio" name="rating" value="good"> Good</label>
+            <label><input type="radio" name="rating" value="average"> Average</label>
+            <label><input type="radio" name="rating" value="poor"> Needs Improvement</label>
+          </div>
+        </div>
+
+        <!-- Textarea comments, optional free-text feedback -->
+        <div class="form-group">
+          <label for="comments">Additional Comments:</label>
+          <textarea id="comments" name="comments" rows="5" placeholder="Share your thoughts and suggestions..."></textarea>
+        </div>
+
+        <!-- Newsletter opt-in checkbox -->
+        <div class="form-group">
+          <label><input type="checkbox" name="newsletter" value="yes"> Subscribe to newsletter for updates</label>
+        </div>
+
+        <!-- Submit and clear controls -->
+        <div class="form-group">
+          <button type="submit" class="btn btn-submit">Submit Feedback</button>
+          <button type="reset" class="btn btn-reset">Clear Form</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Resources section, recommended and external links -->
+    <section class="resources-section">
+      <h2>Additional Resources</h2>
+      <p>Continue your learning journey with these recommended resources:</p>
+      <ul>
+        <!-- Use rel="noopener" when opening external links in a new tab for security -->
+        <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN Web Docs</a> - Comprehensive web development documentation</li>
+        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a> - Tutorials and references</li>
+        <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a> - Tips and tricks for CSS</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer: project copyright and contact information -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mubaraq Yusuf. All rights reserved.</p>
+      <p>Contact: <a href="mailto:sunshinewrlld@gmail.com">sunshinewrlld@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>

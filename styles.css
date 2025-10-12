@@ -1,0 +1,756 @@
+:root {
+    /* Primary brand colors */
+    --primary-color: #2563eb;    /* main blue */
+    --primary-dark: #1e40af;     /* darker blue for hover/accents */
+    --primary-light: #3b82f6;    /* lighter blue for subtle accents */
+
+    /* Secondary/accent colors */
+    --secondary-color: #10b981;  /* green accent */
+    --accent-color: #f59e0b;     /* amber accent */
+
+    /* Text colors */
+    --text-primary: #1f2937;     /* main text color */
+    --text-secondary: #6b7280;   /* muted text color */
+
+    /* Background colors */
+    --bg-light: #f9fafb;         /* page background */
+    --bg-white: #ffffff;         /* card / content background */
+
+    /* Borders & shadows */
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    /* Spacing and radius */
+    --spacing-unit: 8px;         /* base spacing unit */
+    --border-radius: 8px;        /* rounded corners */
+    --transition-speed: 0.3s;    /* default transition duration */
+}
+
+
+/* =========================
+   Reset / base
+   - Remove browser defaults and set box-sizing.
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* makes sizing predictable */
+}
+
+/* Body defaults: font, readable line height and background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-light);
+}
+
+
+/* =========================
+   Page container
+   - Constrains content width and adds horizontal padding.
+   ========================= */
+.container {
+    max-width: 1200px;                                 /* comfortable wide reading width */
+    margin: 0 auto;                                    /* center on page */
+    padding: 0 calc(var(--spacing-unit) * 2);          /* horizontal padding */
+}
+
+
+/* =========================
+   Header (hero)
+   - Large, prominent top section with gradient background.
+   ========================= */
+header {
+    background-color: #1e40af;
+    color: white;
+    padding: calc(var(--spacing-unit) * 6) 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+
+/* =========================
+   Navigation bar
+   - Sticky header with centered menu.
+   - Menu items show an underline on hover/active using ::after.
+   ========================= */
+nav {
+    background-color: var(--bg-white);
+    position: sticky; /* stays at top while scrolling */
+    top: 0;
+    z-index: 1000;    /* above other content */
+}
+
+.nav-menu {
+    list-style: none;               /* remove bullets */
+    display: flex;                  /* horizontal list */
+    justify-content: center;        /* center the menu */
+    flex-wrap: wrap;                /* wrap on narrow viewports */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0;                      /* spacing handled by anchors */
+}
+
+.nav-menu a {
+    display: block;
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 3); /* comfortable click area */
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-speed) ease; /* smooth hover */
+    position: relative;             /* for ::after underline positioning */
+}
+
+/* underline effect (animated) */
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;                       /* start collapsed */
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all var(--transition-speed) ease;
+    transform: translateX(-50%);    /* center the underline */
+}
+
+/* expand underline on hover or if link has .active */
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 80%;
+}
+
+/* subtle hover background + color */
+.nav-menu a:hover {
+    color: var(--primary-color);
+    background-color: var(--bg-light);
+}
+
+/* mark active link color */
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   Main & Section spacing
+   - Provide vertical rhythm between sections.
+   ========================= */
+main {
+    padding: calc(var(--spacing-unit) * 6) 0; /* vertical padding for main content */
+}
+
+section {
+    margin-bottom: calc(var(--spacing-unit) * 8); /* space between sections */
+}
+
+/* Headings styling for consistent hierarchy */
+h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    line-height: 1.8; /* readable paragraph spacing */
+}
+
+strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+em {
+    font-style: italic;
+    color: var(--primary-dark); /* emphasize with brand color */
+}
+
+/* inline code style */
+mark {
+    background-color: #fef3c7;
+}
+
+code {
+    background-color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: var(--primary-dark);
+}
+
+
+/* =========================
+   Content grid and cards
+   - Responsive grid for feature cards (auto-fit).
+   - Card styles include shadow and hover lift.
+   ========================= */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive column sizing */
+    gap: calc(var(--spacing-unit) * 3);
+    margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+.feature-card {
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 4);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+/* subtle lift effect on hover to indicate interactiveness */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.feature-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+/* list items show a check mark before each item */
+.feature-card ul li {
+    padding-left: calc(var(--spacing-unit) * 3);
+    margin-bottom: calc(var(--spacing-unit) * 1);
+    position: relative;
+}
+
+.feature-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+
+/* =========================
+   Buttons
+   - Reusable .btn with hover states.
+   ========================= */
+.btn {
+    display: inline-block;
+    padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 4);
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* download / accent button variant */
+.btn-download {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-download:hover {
+    background-color: #059669; /* darker green on hover */
+    border-color: #059669;
+}
+
+/* submit variant (reuses primary color) */
+.btn-submit {
+    background-color: var(--primary-color);
+}
+
+
+/* =========================
+   Hero & benefits
+   ========================= */
+.hero {
+    text-align: center;
+    padding: calc(var(--spacing-unit) * 4) 0;
+}
+
+.benefits-list {
+    list-style-position: inside;
+    padding-left: calc(var(--spacing-unit) * 2);
+}
+
+.benefits-list li {
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    line-height: 1.8;
+}
+
+ul.concept-list {
+    padding-left: calc(var(--spacing-unit) * 4);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+ul.concept-list li {
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+
+/* =========================
+   Video container
+   - Keep container class for responsive embeds (iframes).
+   ========================= */
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Tech table
+   - Simple table styling for feature lists / tech stack.
+   ========================= */
+.tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    overflow: hidden; /* ensure rounded corners clip content */
+    box-shadow: var(--shadow-md);
+    margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.tech-table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tech-table th,
+.tech-table td {
+    padding: calc(var(--spacing-unit) * 2);
+    text-align: left;
+}
+
+.tech-table th {
+    font-weight: 600;
+}
+
+.tech-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.tech-table tbody tr:hover {
+    background-color: var(--bg-light);
+}
+
+.tech-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================
+   Forms
+   - Simple form panel with consistent spacing and focus styles.
+   ========================= */
+.tutorial-form {
+    max-width: 700px;
+    background-color: var(--bg-white);
+    padding: calc(var(--spacing-unit) * 4);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.form-group {
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: calc(var(--spacing-unit) * 1);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: calc(var(--spacing-unit) * 1.5);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color var(--transition-speed) ease;
+}
+
+/* focus state for accessible keyboard navigation */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+
+/* Checkbox / radio groups layout */
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 1);
+}
+
+.checkbox-group label,
+.radio-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+    margin-right: calc(var(--spacing-unit) * 1);
+}
+
+/* =========================
+   Gallery
+   - Responsive grid of images with hover lift.
+   ========================= */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: calc(var(--spacing-unit) * 3);
+    margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+.gallery-item {
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item figcaption {
+    padding: calc(var(--spacing-unit) * 2);
+}
+
+.gallery-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: calc(var(--spacing-unit) * 1);
+    color: var(--primary-color);
+}
+
+.gallery-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   Author / profile
+   - Author card with avatar and info.
+   ========================= */
+.author-profile {
+    display: flex;
+    gap: calc(var(--spacing-unit) * 4);
+    align-items: flex-start;
+    background-color: var(--bg-white);
+    padding: calc(var(--spacing-unit) * 4);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: #1e40af;
+}
+
+.author-info h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   Sitemap / diagrams
+   - Simple blocks used to visualize page hierarchy.
+   ========================= */
+.sitemap-diagram {
+    background-color: var(--bg-white);
+    padding: calc(var(--spacing-unit) * 6);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+.sitemap-level-1,
+.sitemap-level-2,
+.sitemap-level-3 {
+    display: flex;
+    justify-content: center;
+    gap: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 4);
+    flex-wrap: wrap;
+}
+
+.sitemap-node {
+    position: relative;
+}
+
+.sitemap-node a,
+.sitemap-subnode a {
+    display: block;
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 3);
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    text-align: center;
+    min-width: 150px;
+    transition: all var(--transition-speed) ease;
+}
+
+/* highlight home node with secondary color and larger padding */
+.sitemap-node.home-node a {
+    background-color: var(--secondary-color);
+    font-size: 1.1rem;
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 4);
+}
+
+.sitemap-subnode a {
+    background-color: var(--accent-color);
+    min-width: 120px;
+    font-size: 0.9rem;
+}
+
+.sitemap-node a:hover,
+.sitemap-subnode a:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.sitemap-node a span {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: calc(var(--spacing-unit) * 0.5);
+}
+
+/* nested sitemap list style */
+.sitemap-list {
+    padding-left: calc(var(--spacing-unit) * 3);
+}
+
+.sitemap-list li {
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.sitemap-list ul {
+    margin-top: calc(var(--spacing-unit) * 1);
+    padding-left: calc(var(--spacing-unit) * 4);
+}
+
+
+/* =========================
+   Quick nav / features (kept quick-nav, removed feature-box)
+   ========================= */
+.quick-nav {
+    display: flex;
+    gap: calc(var(--spacing-unit) * 2);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quick-link {
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+    background-color: var(--bg-white);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--primary-color);
+    font-weight: 600;
+}
+
+.quick-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+/* =========================
+   Learning steps list
+   ========================= */
+.learning-steps {
+    padding-left: calc(var(--spacing-unit) * 3);
+}
+
+.learning-steps li {
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.learning-steps li p {
+    margin-top: calc(var(--spacing-unit) * 1);
+    color: var(--text-secondary);
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    background-color: var(--text-primary);
+    color: white;
+    text-align: center;
+    padding: calc(var(--spacing-unit) * 4) 0;
+    margin-top: calc(var(--spacing-unit) * 8);
+}
+
+footer p {
+    margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+footer a {
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   Responsive tweaks
+   - Adjust sizes and layout for tablet and mobile widths.
+   ========================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* stack nav vertically on smaller screens */
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu a {
+        padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2);
+    }
+
+    /* single-column content on small screens */
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* author card becomes vertical */
+    .author-profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sitemap-level-2,
+    .sitemap-level-3 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 calc(var(--spacing-unit) * 1.5);
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .feature-card {
+        padding: calc(var(--spacing-unit) * 3);
+    }
+
+    .tutorial-form {
+        padding: calc(var(--spacing-unit) * 3);
+    }
+}
+
+/* End of stylesheet */

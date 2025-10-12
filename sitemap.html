@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site map showing the structure and navigation of the Frontend Development Guide">
+    <meta name="author" content="Mubaraq Yusuf">
+    <meta name="created" content="2025-10-09">
+    <title>Sitemap - Frontend Development Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Main page title -->
+            <h1>Website Sitemap</h1>
+            <!-- Supporting tagline explaining purpose of page -->
+            <p class="tagline">Navigate Through the Complete Site Structure</p>
+        </div>
+    </header>
+
+    <!-- Primary nav bar for main site pages -->
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <!-- Link to home page -->
+                <li><a href="index.html">Home</a></li>
+                <!-- Link to about page -->
+                <li><a href="about.html">About</a></li>
+                <!-- Link to tutorials page -->
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <!-- Link to gallery page -->
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- Current page -->
+                <li><a href="sitemap.html" class="active">Sitemap</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="container">
+        <!-- Introduction section describing the sitemap purpose -->
+        <section class="sitemap-intro">
+            <h2>Website Structure</h2>
+            <!-- Explains what this sitemap provides to the user -->
+            <p>This sitemap is a <strong>full guide</strong> of the website structure, which displays all pages and their relationships. Use it as a quick reference to navigate the entire site.</p>
+        </section>
+
+        <!-- Visual representation of sitemap -->
+        <section class="sitemap-visual">
+            <h3>Visual Sitemap Diagram</h3>
+            <!-- Decorative diagram -->
+            <div class="sitemap-diagram">
+                <!-- Top-level (home) page -->
+                <div class="sitemap-level-1">
+                    <div class="sitemap-node home-node">
+                        <!-- Home page linking to the landing page -->
+                        <a href="index.html"><strong>Home</strong><span>Main Landing Page</span></a>
+                    </div>
+                </div>
+
+                <!-- Sitemap Second level: primary site sections -->
+                <div class="sitemap-level-2">
+                    <div class="sitemap-node">
+                        <!-- About page -->
+                        <a href="about.html"><strong>About</strong><span>Author & Purpose</span></a>
+                    </div>
+                    <div class="sitemap-node">
+                        <!-- Tutorials page -->
+                        <a href="tutorials.html"><strong>Tutorials</strong><span>Learning Resources</span></a>
+                    </div>
+                    <div class="sitemap-node">
+                        <!-- Gallery page  -->
+                        <a href="gallery.html"><strong>Gallery</strong><span>Visual Examples</span></a>
+                    </div>
+                    <div class="sitemap-node">
+                        <!-- Sitemap page (current) -->
+                        <a href="sitemap.html"><strong>Sitemap</strong><span>Site Structure</span></a>
+                    </div>
+                </div>
+
+                <!-- Sitemap Third level: subsections within tutorials page -->
+                <div class="sitemap-level-3">
+                    <div class="sitemap-subnode">
+                        <!-- Anchor link to HTML section within tutorials page -->
+                        <a href="tutorials.html#html">HTML Section</a>
+                    </div>
+                    <div class="sitemap-subnode">
+                        <!-- Anchor link to CSS section within tutorials page -->
+                        <a href="tutorials.html#css">CSS Section</a>
+                    </div>
+                    <div class="sitemap-subnode">
+                        <!-- Anchor link to JavaScript section within tutorials page -->
+                        <a href="tutorials.html#javascript">JavaScript Section</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Textual list representation the site structure -->
+        <section class="sitemap-text">
+            <h3>Complete Page List</h3>
+            <!-- Short description for the users  -->
+            <p>Here is an outline of all pages from our site:</p>
+            <!-- Unordered list of pages with sub-items -->
+            <ul class="sitemap-list">
+                <li>
+                    <!-- Home page entry -->
+                    <a href="index.html"><strong>Home Page (index.html)</strong></a>
+                    <ul>
+                        <li>Welcome section</li>
+                        <li>Feature cards</li>
+                        <li>Introduction video</li>
+                        <li>Downloadable roadmap</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- About page entry -->
+                    <a href="about.html"><strong>About Page (about.html)</strong></a>
+                    <ul>
+                        <li>Author profile</li>
+                        <li>Mission statement</li>
+                        <li>Technologies table</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Tutorials page entry with anchors to subsections -->
+                    <a href="tutorials.html"><strong>Tutorials Page (tutorials.html)</strong></a>
+                    <ul>
+                        <li><a href="tutorials.html#html">HTML Tutorials</a></li>
+                        <li><a href="tutorials.html#css">CSS Tutorials</a></li>
+                        <li><a href="tutorials.html#javascript">JavaScript Tutorials</a></li>
+                        <li>Feedback form</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Gallery page entry -->
+                    <a href="gallery.html"><strong>Gallery Page (gallery.html)</strong></a>
+                    <ul>
+                        <li>Image gallery</li>
+                        <li>Downloadable resources</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Sitemap page entry (current page) -->
+                    <a href="sitemap.html"><strong>Sitemap Page (sitemap.html)</strong></a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Quick navigation links that will route the user faster -->
+        <section class="quick-links">
+            <h3>Quick Navigation</h3>
+            <!-- Navigation with ARIA label for assistive tech -->
+            <nav class="quick-nav">
+                <a href="index.html" class="quick-link">Home</a>
+                <a href="about.html" class="quick-link">About</a>
+                <a href="tutorials.html" class="quick-link">Tutorials</a>
+                <a href="gallery.html" class="quick-link">Gallery</a>
+                <!-- Contact link opens user's default mail -->
+                <a href="mailto:sunshinewrlld@gmail.com" class="quick-link">Contact</a>
+            </nav>
+        </section>
+    </main>
+
+    <!-- Footer with copyright and contact info -->
+    <footer>
+        <div class="container">
+            <!-- Copyright -->
+            <p>&copy; 2025 Mubaraq Yusuf. All rights reserved.</p>
+            <!-- Email info for site owner -->
+            <p>Contact: <a href="mailto:sunshinewrlld@gmail.com">sunshinewrlld@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
