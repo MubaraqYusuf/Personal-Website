@@ -20,7 +20,6 @@ The website includes multiple pages, styling, interactivity, and downloadable co
 | `gallery.html` | Image gallery of examples or visuals. |
 | `sitemap.html` | Sitemap or overview page of the website. |
 | `css/styles.css` | Custom stylesheet for layout, color, and responsiveness. |
-| `js/script.js` | Simple JavaScript for DHTML interactivity. |
 | `docs/learning_guide.pdf` | Downloadable learning guide document. |
 | `report.txt` | Development report describing implementation details. |
 
@@ -43,7 +42,7 @@ The website includes multiple pages, styling, interactivity, and downloadable co
 | ✅ **Responsive Design** | Media query added for small screen adjustments. |
 | ✅ **Animation** | Hover and pulse effects using `@keyframes`. |
 | ✅ **Flexbox/Grid Layout** | Implemented with `.row` and `.grid` layout classes. |
-| ✅ **DHTML (JavaScript)** | Simple script toggles content and displays current date/time. |
+
 
 ---
 
@@ -58,12 +57,11 @@ The website includes multiple pages, styling, interactivity, and downloadable co
 
 ## 🧰 Technical Details
 
-- Built with **HTML5**, **CSS3**, and **JavaScript**.  
+- Built with **HTML5**, **CSS3**
 - Manually coded (no frameworks used).  
 - Includes a **media query** for screen width ≤720px.  
 - Organized folder structure:  
   - `/css` → stylesheet  
-  - `/js` → JavaScript file  
   - `/images` → image gallery and sitemap diagram  
   - `/docs` → PDF learning guide  
   - `/` → root-level pages  
@@ -100,7 +98,6 @@ The website includes multiple pages, styling, interactivity, and downloadable co
 | Media query | ✅ | Responsive for small screens |
 | CSS animation | ✅ | Hover and pulse animations |
 | Flexbox/Grid layout | ✅ | `.row` and `.grid` classes |
-| DHTML interactivity | ✅ | JS toggling and date display |
 
 ---
 
