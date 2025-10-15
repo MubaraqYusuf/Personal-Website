@@ -105,7 +105,6 @@ The website includes multiple pages, styling, interactivity, and downloadable co
 
 - © *Mubaraq Yusuf (2025)*  
 - All content is self-created or uses open placeholders.  
-- This project is submitted for **educational purposes** under the PW1 coursework.
 
 ---
 
