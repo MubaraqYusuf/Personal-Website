@@ -31,7 +31,7 @@ The website includes multiple pages, styling, interactivity, and downloadable co
 |----------|--------------|
 | ✅ **Multiple Pages** | 5 main pages (`index`, `about`, `tutorials`, `gallery`, `sitemap`). |
 | ✅ **Navigation Menu** | Appears on every page for easy navigation. |
-| ✅ **Author & Contact Info** | “Mubaraq Yusuf — 2025” and `mailto:SunshineWrlld@gmail.com`. |
+| ✅ **Author & Contact Info** | `mailto:SunshineWrlld@gmail.com`. |
 | ✅ **Metadata** | Each page contains meta tags: author, description, keywords, creation date. |
 | ✅ **Semantic HTML** | Correct use of headings (`<h1>`–`<h3>`), sections, and lists. |
 | ✅ **Image Gallery** | Implemented in `gallery.html` with accessible alt text. |
