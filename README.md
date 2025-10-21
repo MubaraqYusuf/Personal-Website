@@ -2,7 +2,7 @@
 
 ## 🧩 Overview
 
-This project is a **personal website** created as part of the **PW1 task**.  
+This project is a **personal website**.  
 It demonstrates the use of **HTML**, **CSS**, and **basic JavaScript (DHTML)** to design a responsive and accessible website.  
 The content focuses on **self-learning and tutorials** related to web development.
 
